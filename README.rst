@@ -13,7 +13,7 @@ Sebelum bisa menggunakan inkscape di Terminal. Inkscape harus dimasukkan ke Path
 	
 Ada dua cara untuk menjalankan *command*, yaitu via Terminal (Command Prompt) dan via Python.
 
-via Terminal
+via Terminal (Inkscape versi 0.92.5)
 ----------------------------------------------------------------------------------------
 
 
