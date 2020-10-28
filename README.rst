@@ -3,7 +3,8 @@ Inkscape Tips
 
 .. contents:: **Contents**
 
-Berikut ini adalah *script* untuk mengubah jenis file dengan menggunakan inkscape di Terminal. 
+Berikut ini adalah *script* untuk mengubah jenis file dengan menggunakan
+inkscape v0.92.5 di Terminal. 
 
 Sebelum bisa menggunakan inkscape di Terminal. Inkscape harus dimasukkan ke Path:
 
@@ -13,7 +14,7 @@ Sebelum bisa menggunakan inkscape di Terminal. Inkscape harus dimasukkan ke Path
 	
 Ada dua cara untuk menjalankan *command*, yaitu via Terminal (Command Prompt) dan via Python.
 
-via Terminal (Inkscape versi 0.92.5)
+via Terminal
 ----------------------------------------------------------------------------------------
 
 
@@ -70,4 +71,23 @@ via Python
         # pdf2png(source)
         
 Untuk menggunakan *script* di atas, ganti *source* dengan nama dari file yang ingin dikonversikan.
+
+via Makefile
+---------------------------------------------------------------------------------
+
+Berikut ini contoh Makefile untuk mengkonversi dari pdf ke png.
+
+::
+
+        #convert pdf to png by Yohan
+        #change-log
+        #22-10-2020
+
+        SRC:= $(wildcard *.pdf)
+        OUT:= $(SRC:%.pdf=%.png)
+
+        all: $(OUT)
+
+        %.png: %.pdf
+                inkscape --file=$< -z --export-dpi=300 --export-area-drawing --export-png=$@
 
