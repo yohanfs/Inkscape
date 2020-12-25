@@ -91,3 +91,30 @@ Berikut ini contoh Makefile untuk mengkonversi dari pdf ke png.
         %.png: %.pdf
                 inkscape --file=$< -z --export-dpi=300 --export-area-drawing --export-png=$@
 
+Keyboard Shortcut
+---------------------------------------------------------------------------------
+
+Resize page to drawing or selection:
+
+::
+
+	Ctrl+Shift+R
+
+Greek Unicode
+---------------------------------------------------------------------------------
+
+`Greek unicode`_
+
+
+
+
+
+.. Referensi
+
+.. _`Greek unicode`: http://kestrel.nmt.edu/~raymond/software/howtos/greekscape.xhtml
+
+
+
+
+
+
